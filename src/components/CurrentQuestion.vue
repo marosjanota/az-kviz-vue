@@ -41,6 +41,7 @@ export default {
         const store = useStore()
         const qEl = ref()
         const countdownTime = ref(10)
+        const isQuestionActive = ref(true)
  
         var audioTimer = new Audio(require('@/assets/audio/q-timer.ogg'))
         var audioSent = new Audio(require('@/assets/audio/q-sent.ogg'))
@@ -48,19 +49,21 @@ export default {
         console.log("Answer is: " + store.state.currentQuestion.answer)
 
         function startCountdown () {
-            if(countdownTime.value > 0) {
+            if(countdownTime.value > 0 && isQuestionActive.value) {
                 setTimeout(() => {
                     countdownTime.value--
                     if(countdownTime.value < 5) { audioTimer.play() }
                     startCountdown()
                 }, 1000)
             } else {
+                isQuestionActive.value = false
                 qEl.value.classList.add("timeout")
             }
         }
 
         const setWinner = (winner) => {
             audioSent.play()
+            isQuestionActive.valse = false
             props.questions[props.number - 1].winner = winner
             store.commit('SET_QUESTION', null)
         }
