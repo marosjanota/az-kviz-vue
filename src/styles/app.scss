@@ -27,9 +27,10 @@
   .game {
     display: grid;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     place-items: center;
     z-index: 1;
+    overflow: hidden;
   }
 
   .chyron--bg {

@@ -78,12 +78,28 @@
     }
 }
 
+
+@keyframes slidein {
+    from {
+      margin-top: 100%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }
+
 .intro--submit {
+    position: absolute;
+    top: 100%;
+    width: 100%;
     text-align: center;
-    margin-top: 4rem;
+    padding-top: 4rem;
+    animation-duration: 1.5s;
+    animation-name: slidein;
 }
 
-.submit-btn {
+.submit-btn {   
     width: 10rem;
 }
 
