@@ -586,6 +586,28 @@ export default createStore({
                 answer: "Guitar",
                 winner: null, 
             },
+            
+            {
+                id: 1078,
+                question: "How many animation options are available in Axis Charts for a chart type: pie?",
+                hint: "INT",
+                answer: "3",
+                winner: null, 
+            },
+            {
+                id: 1079,
+                question: "What is the name of both of the third party image banks in Axis?",
+                hint: "A&G",
+                answer: "AP, Getty Images",
+                winner: null, 
+            },
+            {
+                id: 1080,
+                question: "What is the Jira work item number of the famous Axis Maps issue",
+                hint: "INT",
+                answer: "2047",
+                winner: null, 
+            },
         ],
         secondQuestions: [
             {
@@ -787,6 +809,41 @@ export default createStore({
             {
                 id: 2029,
                 question: "Is Jirka a singer?",
+                hint: "Y/N",
+                answer: "Y",
+                winner: null, 
+            }, 
+            {
+                id: 2030,
+                question: "Is the number of created Jira work items created since Dec 14th 2020 in the Axis project higher than 1000?",
+                hint: "Y/N",
+                answer: "Y",
+                winner: null, 
+            }, 
+            {
+                id: 2031,
+                question: "Is Patrik proficient in martial arts?",
+                hint: "Y/N",
+                answer: "Y",
+                winner: null, 
+            }, 
+            {
+                id: 2032,
+                question: "Is Patrik’s dog named Kevin?",
+                hint: "Y/N",
+                answer: "N - Merlin",
+                winner: null, 
+            }, 
+            {
+                id: 2033,
+                question: "Are Maps the most used module in Axis by the entire customer group?",
+                hint: "Y/N",
+                answer: "N - Order",
+                winner: null, 
+            }, 
+            {
+                id: 2034,
+                question: "Are Quotes the least used module in Axis by the entire customer group?",
                 hint: "Y/N",
                 answer: "Y",
                 winner: null, 
