@@ -1,0 +1,55 @@
+.current-question {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.80);
+    z-index: 10;
+
+    &-timer > p  {
+        font-size: 3.8rem;
+        color: #fff;
+        margin: 1rem auto;
+    }
+
+    .question {
+        background: #646464;
+        padding: 2rem;
+        font-size: 2rem;
+        margin: 1rem;
+        font-style: italic;
+        border-radius: 10px;
+
+        &.timeout {
+            background: #ebabab;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+
+    .hexagon {
+        margin: 40px 30px;
+    }
+
+    .hexagon-wrapper {
+        display: contents;
+        $items: 1 3 6 10 15 21 28;
+
+        @each $i in $items {
+            &:nth-child(#{$i}):after {
+                content: "";
+                width: 100%;
+            }
+        }
+    }
+}

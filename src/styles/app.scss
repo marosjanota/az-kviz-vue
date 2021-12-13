@@ -1,0 +1,43 @@
+
+:root {
+    --color-primary: #00B5EC;
+    --color-secondary: #20303B;
+    --color-background: #14191d;
+    --color-font: #FFFFFF;
+  
+    --color-active: #138d90;
+    --color-default: #b3adad;
+    --color-default-sec: #969090;
+    --color-user-1: #43bcff;
+    --color-user-1-sec: #365cea;
+    --color-user-2: #ffb743;
+    --color-user-2-sec: #e95b4f;
+    --color-user-none: #504f4f;
+    --color-user-none-sec: #4c4848;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-font);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .game {
+    display: grid;
+    width: 100vw;
+    min-height: 100vh;
+    place-items: center;
+    z-index: 1;
+  }
+
+  .chyron--bg {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 80vh;
+  }
+
+  .c-p {
+      cursor: pointer;
+  }
