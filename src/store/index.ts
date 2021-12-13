@@ -19,7 +19,7 @@ export default createStore({
             },
             {
                 id: 1001,
-                question: "Ako sa volá postava zo seriálu IT Crowds s vtipným účesom ?",
+                question: "Which CSS property can IKEA use for table sales marketing?",
                 hint: "DT",
                 answer: "display: table",
                 winner: null, 
