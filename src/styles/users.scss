@@ -78,7 +78,6 @@
     }
 }
 
-
 @keyframes slidein {
     from {
       margin-top: 100%;
@@ -87,7 +86,31 @@
     to {
       margin-top: 0%;
     }
-  }
+}
+
+@keyframes slideinLeft {
+    from {
+        opacity: 0;
+        transform: translate(-100rem, 0);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translate(0rem, 0);
+    }
+}
+
+@keyframes slideinRight {
+    from {
+        opacity: 0;
+        transform: translate(100rem, 0);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translate(0rem, 0);
+    }
+}
 
 .intro--submit {
     position: absolute;
@@ -101,6 +124,17 @@
 
 .submit-btn {   
     width: 10rem;
+}
+
+.user-img {
+    &-01 {
+        animation-duration: 1.5s;
+        animation-name: slideinLeft;
+    }
+    &-02 {
+        animation-duration: 1.5s;
+        animation-name: slideinRight;
+    }
 }
 
 

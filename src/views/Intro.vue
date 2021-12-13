@@ -6,7 +6,7 @@
         <div class="intro--part-02"  v-if="currentPart == 2">
             <div class="users-box">
                 <div>
-                    <div class="users-box--img">
+                    <div class="users-box--img user-img-01">
                         <img :src="require('@/assets/images/char1.png')" />
                     </div>
                     <input v-model="players.player1name" placeholder="Player 1">
@@ -15,7 +15,7 @@
                     <img :src="require('@/assets/images/vs.png')" />
                 </div>
                 <div>
-                    <div class="users-box--img">
+                    <div class="users-box--img user-img-02">
                         <img :src="require('@/assets/images/char2.png')" />
                     </div>
                     <input v-model="players.player2name" placeholder="Player 2">
