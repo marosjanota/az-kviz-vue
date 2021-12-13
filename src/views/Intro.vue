@@ -6,20 +6,26 @@
         <div class="intro--part-02"  v-if="currentPart == 2">
             <div class="users-box">
                 <div>
-                    <div class="hexagon user-1"></div>
+                    <div class="users-box--img">
+                        <img :src="require('@/assets/images/char1.png')" />
+                    </div>
                     <input v-model="players.player1name" placeholder="Player 1">
                 </div>
+                <div class="users-vs">
+                    <img :src="require('@/assets/images/vs.png')" />
+                </div>
                 <div>
-                    <div class="hexagon user-2"></div>
+                    <div class="users-box--img">
+                        <img :src="require('@/assets/images/char2.png')" />
+                    </div>
                     <input v-model="players.player2name" placeholder="Player 2">
                 </div>
             </div>
             <div class="intro--submit" v-if="(players.player1name && players.player2name)">
-                <span class="submit-btn" @click="currentPart = 3"></span>
+                <img :src="require('@/assets/images/fight.png')" class="submit-btn c-p" @click="currentPart = 3"/>
             </div>
         </div>
         <div class="intro--part-03"  v-if="currentPart == 3">
-            <!-- TODO AZ video -->
             <video :src="require('@/assets/video/azkviz.mp4')" class="az-video" autoplay></video>
             <button class="btn c-p" @click="saveAndStart">Let's play!</button>
         </div>

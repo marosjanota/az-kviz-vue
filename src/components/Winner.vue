@@ -16,11 +16,15 @@ export default {
     computed: {
         ...mapState(['players'])
     },
+    setup() {
+        
+        var audioWinner = new Audio(require('@/assets/audio/winner.wav'))
+        audioWinner.play()
+    }
 }
 </script>
 <style lang="scss" scoped>
 @import "@/styles/winner.scss";
-
     .winner {
         &--overlay {
             position: fixed;

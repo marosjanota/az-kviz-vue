@@ -78,41 +78,24 @@
     }
 }
 
+.intro--submit {
+    text-align: center;
+    margin-top: 4rem;
+}
+
 .submit-btn {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: block;
-    margin: 5rem auto;
-    width: 7rem;
-    height: 10rem;
-    cursor: pointer;
-    color: #b6ff00;
-    transition: all .2s ease-out;
+    width: 10rem;
+}
 
-    &:hover {
-        color: darken(#b6ff00, 15%);
-    }
 
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        background-color: currentColor;
-    }
+.users-vs {
+    margin: 0 4rem;
+}
 
-    &:before {
-        width: .6rem;
-        height: 6rem;
-        transform: rotate(45deg);
-        left: 5rem;
-    }
+.users-box--img {
+    height: 20rem;
 
-    &:after {
-        width: 3rem;
-        height: .6rem;
-        left: 1rem;
-        top: 3.8rem;
-        transform: rotate(45deg);
+    img {
+        max-height: 100%;
     }
 }
