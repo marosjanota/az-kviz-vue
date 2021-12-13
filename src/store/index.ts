@@ -320,7 +320,7 @@ export default createStore({
             },
             {
                 id: 1044,
-                question: "What is a shotcut of BSOD",
+                question: "What does the shortcut BSOD stands for?",
                 hint: "BSOD",
                 answer: "Blue screen of death",
                 winner: null, 
@@ -366,7 +366,7 @@ export default createStore({
                 id: 1050,
                 question: "Name all 3 main brands (divisions) of Chyronhego?",
                 hint: "CTH",
-                answer: "Chyron Tracav Hego",
+                answer: "Chyron Tracab Hego",
                 winner: null, 
             },
             {
@@ -471,7 +471,7 @@ export default createStore({
                 id: 1064,
                 question: "What are the first names of 2 past Axis developers M. Gioino and E. Harokopakis (no typo here)?",
                 hint: "M&E",
-                answer: "Michalen & Emmanuel",
+                answer: "Michael & Emmanuel",
                 winner: null, 
             },
             {
@@ -695,7 +695,7 @@ export default createStore({
             },
             {
                 id: 2016,
-                question: "Is Troajn a computer virus ?",
+                question: "Is Trojan a computer virus ?",
                 hint: "Y/N",
                 answer: "N - Malware",
                 winner: null, 
@@ -786,7 +786,7 @@ export default createStore({
             }, 
             {
                 id: 2029,
-                question: "Is Jirka also a singer?",
+                question: "Is Jirka a singer?",
                 hint: "Y/N",
                 answer: "Y",
                 winner: null, 
