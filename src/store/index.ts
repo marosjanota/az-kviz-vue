@@ -70,14 +70,14 @@ export default createStore({
                 id: 1008,
                 question: "How do I round a number up using javascript?",
                 hint: "MR",
-                answer: "Math.Round()",
+                answer: "Math.round()",
                 winner: null, 
             },
             {
                 id: 1009,
                 question: "What event do I capture the loss of focus from the input in javascript?",
                 hint: "O",
-                answer: "onfocusout",
+                answer: "onfocusout/focusout",
                 winner: null, 
             },
             {
@@ -139,7 +139,7 @@ export default createStore({
             {
                 id: 10018,
                 question: "What's the emergency number in the IT Crowd?",
-                hint: "0188 ...",
+                hint: "0118 ...",
                 answer: "0118 999 881 999 119 725 3",
                 winner: null,
             },
@@ -173,7 +173,7 @@ export default createStore({
             },
             {
                 id: 1023,
-                question: "Number of bit used by the IPv6 address",
+                question: "Number of bits used by the IPv6 address",
                 hint: "INT",
                 answer: "128 bit",
                 winner: null, 
@@ -187,7 +187,7 @@ export default createStore({
             },
             {
                 id: 1025,
-                question: "Which of the following programming language is used to create programs like applets?",
+                question: "Which programming language is used to create programs like applets?",
                 hint: "J",
                 answer: "Java",
                 winner: null, 
@@ -224,7 +224,7 @@ export default createStore({
                 id: 1030,
                 question: "Which operating system is developed and used by Apple Inc",
                 hint: "i",
-                answer: "IOS",
+                answer: "iOS",
                 winner: null, 
             },
             {
