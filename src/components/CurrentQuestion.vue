@@ -1,22 +1,23 @@
 <template lang="html">
     <div class="current-question">
-         <div class="hexagon hexagon-big" @click="startCountdown">
-            <span class="hexagon-letter">{{currentQuestion.hint}}</span>
-        </div> 
-        <div class="current-question-timer">
-            <p>{{countdownTime}}</p>
+        <div class="hexagon hexagon-big" @click="startCountdown">
+            <span class="hexagon-letter">{{ currentQuestion.hint }}</span>
         </div>
-        <div class="question" ref="qEl">
-            <p>{{currentQuestion.question}}</p>
+        <div class="current-question-timer">
+            <p>{{ countdownTime }}</p>
+        </div>
+        <div class="question" v-bind:class="{ timeout: timeoutPassed }">
+            <p>{{ currentQuestion.question }}</p>
         </div>
         <div class="users-box">
-            <div @click="setWinner(1)"> <!--  TODO CLick event -->
+            <div @click="setWinner(1)">
+                <!--  TODO CLick event -->
                 <div class="hexagon user-1"></div>
-                <span>{{players.player1name}}</span>
+                <span>{{ players.player1name }}</span>
             </div>
             <div @click="setWinner(2)">
                 <div class="hexagon user-2"></div>
-                <span>{{players.player2name}}</span>
+                <span>{{ players.player2name }}</span>
             </div>
             <div @click="setWinner(0)">
                 <div class="hexagon"></div>
@@ -26,54 +27,58 @@
     </div>
 </template>
 <script>
-import { ref } from 'vue'
-import { mapState, useStore } from 'vuex'
+//@ts-check
+
+import { ref } from "vue";
+import { mapState, useStore } from "vuex";
 
 export default {
     props: {
         questions: Array,
-        number: Number
+        number: Number,
     },
     computed: {
-        ...mapState(['players', 'currentQuestion']),
+        ...mapState(["players", "currentQuestion"]),
     },
-    setup (props) {
-        const store = useStore()
-        const qEl = ref()
-        const countdownTime = ref(15)
+    setup(props) {
+        const store = useStore();
+        const countdownTime = ref(10);
+        const isQuestionActive = ref(true);
+        const timeoutPassed = ref(false);
 
-        /* TODO Add 15sec for 1QA and 10 sec for 2QA */
- 
-        var audioTimer = new Audio(require('@/assets/audio/q-timer.ogg'))
-        var audioSent = new Audio(require('@/assets/audio/q-sent.ogg'))
+        var audioTimer = new Audio(require("@/assets/audio/q-timer.ogg"));
+        var audioSent = new Audio(require("@/assets/audio/q-sent.ogg"));
 
-        console.log("Answer is: " + store.state.currentQuestion.answer)
+        console.log("Answer is: " + store.state.currentQuestion.answer);
 
-        function startCountdown () {
-            if(countdownTime.value > 0 ) {
+        function startCountdown() {
+            if (countdownTime.value > 0) {
                 setTimeout(() => {
-                    countdownTime.value--
-                    if(countdownTime.value < 5) { audioTimer.play() }
-                    startCountdown()
-                }, 1000)
+                    countdownTime.value--;
+                    if (countdownTime.value < 5) {
+                        audioTimer.play();
+                    }
+                    startCountdown();
+                }, 1000);
             } else {
-                qEl.value.classList.add("timeout")
+                isQuestionActive.value = false;
+                timeoutPassed.value = true;
             }
         }
 
         const setWinner = (winner) => {
-            audioSent.play()
-            countdownTime.value = 0
-            props.questions[props.number - 1].winner = winner
-            store.commit('SET_QUESTION', null)
-        }
+            audioSent.play();
+            isQuestionActive.valse = false;
+            props.questions[props.number - 1].winner = winner;
+            store.commit("SET_QUESTION", null);
+        };
 
         return {
             startCountdown,
             countdownTime,
-            qEl,
-            setWinner
-        }
-    }
-}
+            setWinner,
+            timeoutPassed,
+        };
+    },
+};
 </script>
