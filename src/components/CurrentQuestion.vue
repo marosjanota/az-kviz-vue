@@ -10,12 +10,11 @@
         <div class="current-question-timer">
             <p>{{ countdownTime }}</p>
         </div>
-        <div class="question" v-bind:class="{ timeout: timeoutPassed }">
+        <div class="question" v-bind:class="{ 'timeout': timeoutPassed }">
             <p>{{ currentQuestion.question }}</p>
         </div>
         <div class="users-box">
             <div @click="setWinner(1)">
-                <!--  TODO CLick event -->
                 <div class="hexagon user-1"></div>
                 <span>{{ players.player1name }}</span>
             </div>
@@ -65,16 +64,15 @@ export default {
                     startCountdown();
                 }, 1000);
             } else {
-                isQuestionActive.value = false;
-                timeoutPassed.value = true;
+                timeoutPassed.value = true
             }
         }
 
         const setWinner = (winner) => {
             audioSent.play();
-            isQuestionActive.valse = false;
-            props.questions[props.number - 1].winner = winner;
-            store.commit("SET_QUESTION", null);
+            countdownTime.value = 0
+            props.questions[props.number - 1].winner = winner
+            store.commit("SET_QUESTION", null)
         };
 
         return {
