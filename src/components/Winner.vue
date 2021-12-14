@@ -1,7 +1,9 @@
 <template lang="html">
     <div class="winner--overlay">
         <div class="winner--box">
-            <img :src="require('@/assets/trophy.svg')" />
+            <a href="/">
+                <img :src="require('@/assets/trophy.svg')" />
+            </a>
             <h1>{{players.winner}}</h1>
         </div>
         <div class="pyro">

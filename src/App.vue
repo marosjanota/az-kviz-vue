@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Snow />
     <img :src="require('@/assets/chyron.svg')" class="chyron--bg" />
     <div class="game">
         <Intro /> 
@@ -9,10 +10,12 @@
 
 <script>
 import Intro from "@/views/Intro.vue";
+import Snow from "@/components/Snowflakes.vue"
 
 export default {
   components: {
-    Intro
+    Intro,
+    Snow
   }
 }
 </script>
