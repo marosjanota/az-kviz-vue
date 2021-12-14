@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 import { questions as trueFalseQuestions } from "./trueFalseQuestions.json"
 import { questions as answerQuestions } from "./answerQuestions.json"
-import { getRandomQuestions } from '@/utils'
+import { getRandomItems } from '@/utils'
 
 export default createStore({
     state: {
@@ -28,8 +28,8 @@ export default createStore({
         }
     },
     getters: {
-        getFirstQeustionsList: state => getRandomQuestions(state.firstQuestions),
-        getSecondQeustionsList: state => getRandomQuestions(state.secondQuestions),
-        getFinalQuestionsList: state => getRandomQuestions(state.firstQuestions.filter(i => i.finalRoundQuestion))
+        getFirstQeustionsList: state => getRandomItems(state.firstQuestions),
+        getSecondQeustionsList: state => getRandomItems(state.secondQuestions),
+        getFinalQuestionsList: state => getRandomItems(state.firstQuestions.filter(i => i.finalRoundQuestion))
     }
 })
