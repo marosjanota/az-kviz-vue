@@ -1,0 +1,277 @@
+{
+    "questions": [
+        {
+            "id": 2001,
+            "question": "Is Javascript case-sensitive ?",
+            "hint": "Y/N",
+            "answer": "A",
+            "winner": null
+        },
+        {
+            "id": 2002,
+            "question": "Is Javascript the same as is Java ?",
+            "hint": "Y/N",
+            "answer": "N",
+            "winner": null
+        },
+        {
+            "id": 2003,
+            "question": "Is C# the same as is C++ ?",
+            "hint": "Y/N",
+            "answer": "N",
+            "winner": null
+        },
+        {
+            "id": 2004,
+            "question": "Could a semicolon be used in brainfuck?",
+            "hint": "Y/N",
+            "answer": "N",
+            "winner": null
+        },
+        {
+            "id": 2005,
+            "question": "Is it possible to create HelloWorld in javascript using only six characters? (not code length)",
+            "hint": "Y/N",
+            "answer": "Y - JsFuck",
+            "winner": null
+        },
+        {
+            "id": 2006,
+            "question": "Has a Holly supercomputer from IQ 8000 ? (Which is like 8,000 gym teachers)",
+            "hint": "Y/N",
+            "answer": "N - 6000",
+            "winner": null
+        },
+        {
+            "id": 2007,
+            "question": "Was google the first search engine in internet?",
+            "hint": "Y/N",
+            "answer": "N - Archie",
+            "winner": null
+        },
+        {
+            "id": 2008,
+            "question": "Is Firewall in computer used for Authentication?",
+            "hint": "Y/N",
+            "answer": "N - Security",
+            "winner": null
+        },
+        {
+            "id": 2009,
+            "question": "Is COBOL a database management software?",
+            "hint": "Y/N",
+            "answer": "N",
+            "winner": null
+        },
+        {
+            "id": 2010,
+            "question": "Is .gif an extension for videos?",
+            "hint": "Y/N",
+            "answer": "N",
+            "winner": null
+        },
+        {
+            "id": 2011,
+            "question": " Is WordStar the first word processor application?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2012,
+            "question": "Is RAM volatile memory in a computer system?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2013,
+            "question": "One Terabyte (1 TB) is equal to 1000GB",
+            "hint": "Y/N",
+            "answer": "N - 1024GB",
+            "winner": null
+        },
+        {
+            "id": 2014,
+            "question": "Was Windows the first fully supported 64-bit operating system?",
+            "hint": "Y/N",
+            "answer": "N - Linux",
+            "winner": null
+        },
+        {
+            "id": 2015,
+            "question": "Is MOSAIC a web browser ?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2016,
+            "question": "Is Trojan a computer virus ?",
+            "hint": "Y/N",
+            "answer": "N - Malware",
+            "winner": null
+        },
+        {
+            "id": 2017,
+            "question": "Is SMTP Protocol used to receive an e-mail?",
+            "hint": "Y/N",
+            "answer": "N - Pop3",
+            "winner": null
+        },
+        {
+            "id": 2018,
+            "question": "Is Pop3 Protocol used to receive an e-mail?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2019,
+            "question": "Was '@' sign first chosen for its use in e-mail address before 1975?",
+            "hint": "Y/N",
+            "answer": "Y - 1972",
+            "winner": null
+        },
+        {
+            "id": 2020,
+            "question": "Is monitor an Input device ?",
+            "hint": "Y/N",
+            "answer": "N - output",
+            "winner": null
+        },
+        {
+            "id": 2021,
+            "question": "Is Firefox used as an search engine?",
+            "hint": "Y/N",
+            "answer": "N - it's browser",
+            "winner": null
+        },
+        {
+            "id": 2022,
+            "question": "Are cookies stored on the server?",
+            "hint": "Y/N",
+            "answer": "N - on the client",
+            "winner": null
+        },
+        {
+            "id": 2023,
+            "question": "Antivirus protect systems from hackers",
+            "hint": "Y/N",
+            "answer": "N - Firewall",
+            "winner": null
+        },
+        {
+            "id": 2024,
+            "question": "USB Hard disk is a secondary type of storage device",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2025,
+            "question": "'IoT' refers to - Internet Organisation of Telecommunication",
+            "hint": "Y/N",
+            "answer": "N - Internet of Things",
+            "winner": null
+        },
+        {
+            "id": 2026,
+            "question": "Who is a shared resource for both Camio and Axis.",
+            "hint": "Y/N",
+            "answer": "Y ",
+            "winner": null
+        },
+        {
+            "id": 2027,
+            "question": "Does Jim Martinolich own a boat?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2028,
+            "question": "Is the September 11 attack (2001) the reason why the development of the first ever version of Maps module got postponed?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2029,
+            "question": "Is Jirka a singer?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2030,
+            "question": "Is the number of created Jira work items created since Dec 14th 2020 in the Axis project higher than 1000?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2031,
+            "question": "Is Patrik proficient in martial arts?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2032,
+            "question": "Is Patrik’s dog named Kevin?",
+            "hint": "Y/N",
+            "answer": "N - Merlin",
+            "winner": null
+        },
+        {
+            "id": 2033,
+            "question": "Are Maps the most used module in Axis by the entire customer group?",
+            "hint": "Y/N",
+            "answer": "N - Order",
+            "winner": null
+        },
+        {
+            "id": 2034,
+            "question": "Are Quotes the least used module in Axis by the entire customer group?",
+            "hint": "Y/N",
+            "answer": "Y",
+            "winner": null
+        },
+        {
+            "id": 2035,
+            "question": "Is .NET 5 direct successor of .NET 4.7.2?",
+            "hint": "Y/N",
+            "answer": "No, it is direct successor of .NET Core",
+            "winner": null
+        },
+        {
+            "id": 2036,
+            "question": "Is Transport Tycoon part of the Axis?",
+            "hint": "Y/N",
+            "answer": "No",
+            "winner": null
+        },
+        {
+            "id": 2037,
+            "question": "Do we have a monorepo?",
+            "hint": "Y/N",
+            "answer": "Yes (Axis repository)",
+            "winner": null
+        },
+        {
+            "id": 2038,
+            "question": "Do we have some part of axis (incuding infrastructure) runing on Cloud?",
+            "hint": "Y/N",
+            "answer": "Yes (Configuration harvestor)",
+            "winner": null
+        },
+        {
+            "id": 2039,
+            "question": "Is age difference between Martin's kids more than 13yo?",
+            "hint": "Y/N",
+            "answer": "Yes",
+            "winner": null
+        }
+    ]
+}
