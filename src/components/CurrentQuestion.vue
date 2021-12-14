@@ -1,8 +1,12 @@
 <template lang="html">
     <div class="current-question">
-         <div class="hexagon hexagon-big" @click="startCountdown">
-            <span class="hexagon-letter">{{currentQuestion.hint}}</span>
-        </div> 
+        <svg class="progress c-p" x="0px" y="0px" viewBox="0 0 776 628" 
+                ref="hintBox"
+                @click="startCountdown">
+            <path class="track" d="M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z"></path>
+            <path class="fill" d="M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z"></path>
+            <text class="value" x="50%" y="61%">{{currentQuestion.hint}}</text>
+        </svg>
         <div class="current-question-timer">
             <p>{{countdownTime}}</p>
         </div>
@@ -41,15 +45,18 @@ export default {
         const store = useStore()
         const qEl = ref()
         const countdownTime = ref(15)
+        const hintBox = ref(null)
 
         /* TODO Add 15sec for 1QA and 10 sec for 2QA */
  
         var audioTimer = new Audio(require('@/assets/audio/q-timer.ogg'))
         var audioSent = new Audio(require('@/assets/audio/q-sent.ogg'))
 
+        /* Do not remove this console log !!! */ 
         console.log("Answer is: " + store.state.currentQuestion.answer)
 
         function startCountdown () {
+            hintBox.value.classList.add('start')
             if(countdownTime.value > 0 ) {
                 setTimeout(() => {
                     countdownTime.value--
@@ -72,8 +79,66 @@ export default {
             startCountdown,
             countdownTime,
             qEl,
-            setWinner
+            setWinner,
+            hintBox
         }
     }
 }
 </script>
+<style lang="scss">
+
+@keyframes countdown {
+    from {
+        stroke: #20303B;
+        stroke-dashoffset: 2160;
+    }
+
+    to {
+        stroke: #ebabab;
+        stroke-dashoffset: 0;
+    }
+}
+
+.progress .track, .progress .fill{
+	stroke-width: 40;
+	transform: translate(290px, 800px) rotate(-120deg);
+}
+
+.progress {
+	width: 400px;
+	height: 480px;
+    
+    .track{
+        fill: var(--color-default);
+        stroke: #20303B;
+    }
+
+    .fill {
+        fill: rgba(0,0,0,0);
+        stroke: #20303B;
+        stroke-linecap: round;
+        stroke-dasharray: 2160;
+        stroke-dashoffset: 2160;
+        transition: stroke-dashoffset 1s;
+    }
+
+    &.start .fill {
+        animation-duration: 15s;
+        animation-name: countdown;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+}
+
+.progress .value, .progress .text {
+	fill: rgb(255, 255, 255);
+	text-anchor: middle;
+}
+
+.progress .value {
+	font-size: 180px;
+}
+.progress .text {
+	font-size: 120px;
+}
+</style>
