@@ -742,11 +742,40 @@ export default createStore({
             },
             {
                 id: 1119,
-                question: "",
+                question: "How many smokers (cigarettes only) do we have in Axis Brno?",
                 hint: "INT",
-                answer: "",
+                answer: "2 (Pavel & Katka)",
                 winner: null, 
             },
+            
+            {
+                id: 1120,
+                question: "Which city is Katka’s hometown?",
+                hint: "S",
+                answer: "Senice",
+                winner: null, 
+            },
+            {
+                id: 1121,
+                question: "Which brand of beer is tasting the worst but for some reason is Jiri’s favorite? (This question was downloaded from the internet and for sure was not created by Peter)",
+                hint: "R",
+                answer: "Radegast",
+                winner: null, 
+            },
+            {
+                id: 1122,
+                question: "On which faculty is Samuel’s studying right now?",
+                hint: "N/A",
+                answer: "FIT",
+                winner: null, 
+            },
+            {
+                id: 1123,
+                question: "What is the name of Samuel’s favorite teacher? (Samuel’s point of view may be slightly different but WE DONT CARE)",
+                hint: "PS",
+                answer: "Patrik Svikruha",
+                winner: null, 
+            }
         ],
         secondQuestions: [
             {
@@ -1020,6 +1049,20 @@ export default createStore({
                 question: "Is age difference between Martin's kids more than 13yo?",
                 hint: "Y/N",
                 answer: "Yes",
+                winner: null, 
+            }, 
+            {
+                id: 2040,
+                question: "Was the brand of rum which Maros got when his youngest baby was born a Diplomatico?",
+                hint: "Y/N",
+                answer: "N - Blue Mauritius",
+                winner: null, 
+            }, 
+            {
+                id: 2041,
+                question: "Did Martin get a bottle of rum as a gift from Axis team members when his youngest kid was born?",
+                hint: "Y/N",
+                answer: "N - Bottle of Frndzlica",
                 winner: null, 
             }, 
         ]
