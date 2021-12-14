@@ -2,7 +2,7 @@
     <div class="winner--overlay">
         <div class="winner--box">
             <a href="/">
-                <img :src="require('@/assets/trophy.svg')" />
+                <img :src="require('@/assets/images/trophy.svg')" />
             </a>
             <h1>{{players.winner}}</h1>
         </div>

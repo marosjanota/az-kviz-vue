@@ -1,7 +1,10 @@
 <template>
   <div>
     <Snow />
-    <img :src="require('@/assets/chyron.svg')" class="chyron--bg" />
+      
+    <img :src="`${bgPath}`" class="app--bg" />
+    <img :src="`${logoPath}`" class="app--logo" />
+
     <div class="game">
         <Intro /> 
     </div>
@@ -16,6 +19,18 @@ export default {
   components: {
     Intro,
     Snow
+  },
+  setup() {
+    const company = "chyron"
+    //const company = "riganti"
+
+    const logoPath = '/logo-' + company +  '.svg'
+    const bgPath = '/bg-' + company +  '.svg'
+
+    return {
+      logoPath,
+      bgPath
+    }
   }
 }
 </script>

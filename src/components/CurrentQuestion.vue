@@ -40,8 +40,10 @@ export default {
     setup (props) {
         const store = useStore()
         const qEl = ref()
-        const countdownTime = ref(10)
+        const countdownTime = ref(15)
         const isQuestionActive = ref(true)
+
+        /* TODO Add 15sec for 1QA and 10 sec for 2QA */
  
         var audioTimer = new Audio(require('@/assets/audio/q-timer.ogg'))
         var audioSent = new Audio(require('@/assets/audio/q-sent.ogg'))

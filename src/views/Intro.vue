@@ -1,7 +1,7 @@
 <template lang="">
     <div class="game--intro" v-if="currentPart < 4">
         <div class="intro--part-01" v-if="currentPart == 1">
-            <img :src="require('@/assets/ltgb.jpg')" @click="currentPart = 2" class="c-p"/>
+            <img :src="require('@/assets/images/ltgb.jpg')" @click="currentPart = 2" class="c-p"/>
         </div>
         <div class="intro--part-02"  v-if="currentPart == 2">
             <div class="users-box">
