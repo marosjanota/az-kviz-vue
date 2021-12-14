@@ -770,6 +770,13 @@ export default createStore({
                 answer: "40 cm but we have tolerance +/- 10 cm",
                 winner: null, 
             },
+            {
+                id: 1118,
+                question: "What was described as \"Modern way how to do from 1 hour of profesionnal, 8 hours of work for 3 people in 5 days\"?",
+                hint: "CR",
+                answer: "Code review on Pull request/code review",
+                winner: null, 
+            },
         ],
         secondQuestions: [
             {
