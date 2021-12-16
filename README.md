@@ -35,3 +35,10 @@ If the box remains unanswered (X), it may be selected again and the second quest
 - When the question is read, a timer must be started - by clicking on the hint
 - The winner is marked by clicking on his name below the question
 - If someone successfully creates a path to the three sides of the triangle, the winner is displayed by clicking on their name in the upper corners
+
+
+
+---------------
+- posibility to change to answer
+- show the current question number
+- m 
