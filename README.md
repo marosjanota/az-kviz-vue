@@ -38,7 +38,6 @@ If the box remains unanswered (X), it may be selected again and the second quest
 
 
 
----------------
+## TODO
 - posibility to change to answer
 - show the current question number
-- m 
