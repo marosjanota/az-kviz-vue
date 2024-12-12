@@ -1,4 +1,45 @@
 import { createStore } from 'vuex'
+
+function generateQuestionList(allQuestions: any[], cacheKey: string): any[] {
+    let qList = [];
+    let localStorageItems = localStorage.getItem(cacheKey)?.slice(0, -1)
+    let cachedQuestions = JSON.parse(("[" + localStorageItems + "]") || '[]');
+
+    console.log(cachedQuestions)
+    console.log(localStorage.getItem("first"))
+
+    // Reset cached questions if there is not enought questions to take from list
+    if(cachedQuestions.length >= (allQuestions.length - 21)) {
+        localStorage.setItem(cacheKey, "")
+    }
+
+    for (let q = 0; q < 21; q++) {
+        let randomIndex;
+        let selectedQuestion;
+
+        // Find a question that has not been selected before
+        do {
+            randomIndex = Math.floor(Math.random() * allQuestions.length);
+            selectedQuestion = allQuestions[randomIndex];
+        } while (cachedQuestions.includes(selectedQuestion.id));
+
+        // Add the selected question to the list
+        qList.push(selectedQuestion);
+
+        // Add the selected question to the cache
+        //cachedQuestions.push(selectedQuestion.id);
+
+        // Remove the selected question from the pool
+        allQuestions.splice(randomIndex, 1);
+    }
+
+    // Update local storage with the cached questions
+    //localStorage.setItem(cacheKey, JSON.stringify(cachedQuestions));
+
+    return qList;
+}
+
+
 export default createStore({
     state: { 
         players: {
@@ -81,84 +122,84 @@ export default createStore({
                 winner: null, 
             },
             {
-                id: 10010,
+                id: 1010,
                 question: "What character is short for jQuery?",
                 hint: "D",
                 answer: "$",
                 winner: null, 
             },
             {
-                id: 10011,
+                id: 1011,
                 question: "What is the answer to the question of life, the universe and everything?",
                 hint: "INT",
                 answer: "42",
                 winner: null, 
             },
             {
-                id: 10012,
+                id: 1012,
                 question: "What's the name of a character from the IT Crowds series with a funny hairstyle?",
                 hint: "MM",
                 answer: "Maurice Moss",
                 winner: null, 
             },
             {
-                id: 10013,
+                id: 1013,
                 question: "What is the name of the image that appears in the browser tab next to the page title?",
                 hint: "F",
                 answer: "favicon",
                 winner: null, 
             },
             {
-                id: 10014,
+                id: 1014,
                 question: "What command does create a new git repository?",
                 hint: "G",
                 answer: "git init",
                 winner: null, 
             },
             {
-                id: 10015,
+                id: 1015,
                 question: "What is the name of a programming language that consists of only 8 commands",
                 hint: "B",
                 answer: "Brainfuck",
                 winner: null, 
             },
             {
-                id: 10016,
+                id: 1016,
                 question: "What code does the Internal Server Error have in the HTTP header?",
                 hint: "INT",
                 answer: "500",
                 winner: null, 
             },
             {
-                id: 10017,
+                id: 1017,
                 question: "What code does Unathorized have in the HTTP header?",
                 hint: "INT",
                 answer: "401",
                 winner: null,
             },
             {
-                id: 10018,
+                id: 1018,
                 question: "What's the emergency number in the IT Crowd?",
                 hint: "0118 ...",
                 answer: "0118 999 881 999 119 725 3",
                 winner: null,
             },
             {
-                id: 10019,
+                id: 1019,
                 question: "What does number 43 mean in the Big Bang series?",
                 hint: "SR",
                 answer: "Sheldons record in hackisack",
                 winner: null, 
             },
             {
-                id: 10020,
+                id: 1020,
                 question: "What does UTFG stand for?",
                 hint: "UTFG",
                 answer: "Use the fucking google",
                 winner: null, 
             },
             {
-                id: 10021,
+                id: 1021,
                 question: "What does WWW stand for?",
                 hint: "WWW",
                 answer: "world wide web",
@@ -258,14 +299,14 @@ export default createStore({
             {
                 id: 1035,
                 question: "Which function key needs to be press during reboot to enter in Safe Mode of a Windows machine",
-                hint: "F?",
+                hint: "??",
                 answer: "F8",
                 winner: null, 
             },
             {
                 id: 1036,
                 question: "Which key combination is used to permanently delete a file or folder",
-                hint: "?+del",
+                hint: "?+?",
                 answer: "Shift+del",
                 winner: null, 
             },
@@ -665,9 +706,9 @@ export default createStore({
             },
             {
                 id: 1105,
-                question: "TODO",
-                hint: "",
-                answer: "",
+                question: "What menu item does Peter order most often at Chilli Tree?",
+                hint: "INT",
+                answer: "60",
                 winner: null, 
             },
             {
@@ -728,16 +769,16 @@ export default createStore({
             },
             {
                 id: 1117,
-                question: "TODO",
-                hint: "",
-                answer: "",
+                question: "What is Maroš's most hated device?",
+                hint: "M",
+                answer: "MacBook",
                 winner: null, 
             },
             {
                 id: 1118,
-                question: "TODO",
-                hint: "",
-                answer: "",
+                question: "What two animals does the Kasia have on her desk, printed from a 3D printer?",
+                hint: "DB",
+                answer: "Duck and bobr",
                 winner: null, 
             },
             {
@@ -750,30 +791,37 @@ export default createStore({
             
             {
                 id: 1120,
-                question: "TODO",
-                hint: "",
-                answer: "",
+                question: "What is the name of the new invoicing software for contractors?",
+                hint: "R",
+                answer: "Remote",
                 winner: null, 
             },
             {
                 id: 1121,
-                question: "TODO",
+                question: "Who has the ownership of current Relay Agent?",
                 hint: "",
-                answer: "",
+                answer: "Nobody knows... ",
                 winner: null, 
             },
             {
                 id: 1122,
-                question: "TODO",
-                hint: "",
-                answer: "",
+                question: "How long does it take to get to Chilli Tree? (+-1min)",
+                hint: "INT",
+                answer: "8",
                 winner: null, 
             },
             {
                 id: 1123,
-                question: "TODO",
-                hint: "",
-                answer: "",
+                question: "How long has Karl Arnemann been with the company? (+-3y)",
+                hint: "INT",
+                answer: "43",
+                winner: null, 
+            },
+            {
+                id: 1124,
+                question: "Who knows the most about Kasia?",
+                hint: "name",
+                answer: "ChatGPT",
                 winner: null, 
             }
         ],
@@ -955,9 +1003,9 @@ export default createStore({
             }, 
             {
                 id: 2026,
-                question: "Who is a shared resource for both Camio and Axis.",
+                question: "Do we have in Lattice more than 300 people?",
                 hint: "Y/N",
-                answer: "Y ",
+                answer: "Y - 309",
                 winner: null, 
             }, 
             {
@@ -971,7 +1019,7 @@ export default createStore({
                 id: 2028,
                 question: "Were there more than 20 different developers working on AXIS?",
                 hint: "Y/N",
-                answer: "",
+                answer: "Y - (Maros, Pavel, Peto, Honza, Ivo, Marek, Vasek, Kasia, Michal, Franta, Patrik, Celyn, Jirka, Ilca, Pudich, Huba, Sramek, Yomi, Who?, Michael, D. Zacek, Zahradnik, Peter Palka)",
                 winner: null, 
             }, 
             {
@@ -983,9 +1031,9 @@ export default createStore({
             }, 
             {
                 id: 2030,
-                question: "TODO",
+                question: "Does Maroš like to go fishing?",
                 hint: "Y/N",
-                answer: "",
+                answer: "Y",
                 winner: null, 
             }, 
             {
@@ -1082,24 +1130,10 @@ export default createStore({
     },
     getters: {
         getFirstQeustionsList: state => {
-            var qList = []
-            var allQuestions = state.firstQuestions
-            for (let q = 0; q < 21; q++) {
-                var random = Math.floor(Math.random()*(allQuestions.length - 1)) + 1 
-                qList.push(allQuestions[random])
-                allQuestions.splice(random, 1)
-            } 
-            return qList
+            return generateQuestionList(state.firstQuestions, "first")
         },
         getSecondQeustionsList: state => {
-            var qList = []
-            var allQuestions = state.secondQuestions
-            for (let q = 0; q < 21; q++) {
-                var random = Math.floor(Math.random()*(allQuestions.length - 1)) + 1 
-                qList.push(allQuestions[random])
-                allQuestions.splice(random, 1)
-            } 
-            return qList
+            return generateQuestionList(state.secondQuestions, "second")
         }
     }
 })

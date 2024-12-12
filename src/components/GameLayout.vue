@@ -50,15 +50,15 @@ export default {
             })            
         }
 
-        console.log(hexagonList)
-
         const setQuestion = (q) => {
             num.value = q.number
             if(q.winner === null) {
                 store.commit('SET_QUESTION', qList1.find(i => i.id === q.q1.id))
+                localStorage.setItem("first", localStorage.getItem("first") + q.q1.id + ",")
             } 
             else if(q.winner === 0) {
                 store.commit('SET_QUESTION', qList2.find(i => i.id === q.q2.id))
+                localStorage.setItem("second", localStorage.getItem("second") + q.q1.id + ",")
             } else {
                 // Has winner - not todo or only provide winner change option
             }
