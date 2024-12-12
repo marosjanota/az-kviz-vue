@@ -5,9 +5,6 @@ function generateQuestionList(allQuestions: any[], cacheKey: string): any[] {
     let localStorageItems = localStorage.getItem(cacheKey)?.slice(0, -1)
     let cachedQuestions = JSON.parse(("[" + localStorageItems + "]") || '[]');
 
-    console.log(cachedQuestions)
-    console.log(localStorage.getItem("first"))
-
     // Reset cached questions if there is not enought questions to take from list
     if(cachedQuestions.length >= (allQuestions.length - 21)) {
         localStorage.setItem(cacheKey, "")
@@ -26,15 +23,9 @@ function generateQuestionList(allQuestions: any[], cacheKey: string): any[] {
         // Add the selected question to the list
         qList.push(selectedQuestion);
 
-        // Add the selected question to the cache
-        //cachedQuestions.push(selectedQuestion.id);
-
         // Remove the selected question from the pool
         allQuestions.splice(randomIndex, 1);
     }
-
-    // Update local storage with the cached questions
-    //localStorage.setItem(cacheKey, JSON.stringify(cachedQuestions));
 
     return qList;
 }
@@ -1038,16 +1029,16 @@ export default createStore({
             }, 
             {
                 id: 2031,
-                question: "TODO",
+                question: "Will we be able to finish the new maps next year?",
                 hint: "Y/N",
-                answer: "",
+                answer: "Y",
                 winner: null, 
             }, 
             {
                 id: 2032,
-                question: "TODO?",
+                question: "Does the AXIS currently support Chrome version 50 or lower??",
                 hint: "Y/N",
-                answer: "",
+                answer: "Y - 49",
                 winner: null, 
             }, 
             {
@@ -1087,30 +1078,30 @@ export default createStore({
             }, 
             {
                 id: 2038,
-                question: "TODO",
+                question: "Do we have some easter eggs in AXIS?",
                 hint: "Y/N",
-                answer: "",
+                answer: "N ",
                 winner: null, 
             }, 
             {
                 id: 2039,
-                question: "TODO",
+                question: "Is “The IT Crowd” set in a company’s marketing department?",
                 hint: "Y/N",
-                answer: "",
+                answer: "N",
                 winner: null, 
             }, 
             {
                 id: 2040,
-                question: "TODO",
+                question: "In “The Matrix,” does the main character Neo work as a programmer?",
                 hint: "Y/N",
-                answer: "",
+                answer: "Y",
                 winner: null, 
             }, 
             {
                 id: 2041,
-                question: "TODO",
+                question: "Was the first computer programmer a woman?",
                 hint: "Y/N",
-                answer: "",
+                answer: "Y - Ada Lovelace",
                 winner: null, 
             }, 
         ]
